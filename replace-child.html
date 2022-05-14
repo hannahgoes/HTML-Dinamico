@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div id="main">
+        <h1 id="title">Olá Mundo</h1>
+        <p id="text">Eu não gosto de doce de abóbora</p>
+    </div>
+
+    <button type="button" onclick="replace()">Substituir</button>
+
+    <script>
+
+        function replace(){
+
+            //obtendo o "nó" pai
+            var parent = document.getElementById("main");
+
+            //obtendo o parágrafo com texto antigo
+            var old_text = document.getElementById("text")
+            
+            //criando um novo elemento de parágrafo
+            var new_text = document.createElement("p");
+
+            //criando um novo texto para o parágrafo
+            var new_content = document.createTextNode("Minha mãe adora doce de abóbora");
+
+            //inserindo o texto criado ao elemento parágrafo
+            new_text.appendChild(new_content)
+
+            //substituindo o texto antigo pelo texto novo
+            parent.replaceChild(new_text, old_text)
+
+
+
+        }
+
+    </script>
+
+</body>
+</html>
